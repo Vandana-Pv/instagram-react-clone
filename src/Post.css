@@ -1,0 +1,32 @@
+.post{
+    background-color: white;
+    max-width: 500px;
+    border: 1px solid lightgrey;
+    /* gives 45px gap between each posts  */
+    margin-bottom: 45px;
+}
+
+.post__image{
+    width: 100%;
+    object-fit: contain;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.post__text{
+    font-weight: normal;
+    padding: 20px
+}
+
+.post__header{
+    /* Both Username n Avatar should be side by side. So we r using Flex */
+    display: flex;
+    align-items: center;
+    /* 20 top n 10 left gives space for avatar from the left side of the screen*/
+    padding: 20px 10px
+}
+
+.post__avatar{
+    /* used to give space between avatar and username */
+    margin-right: 10px;
+}
