@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import Modal from '@material-ui/core/Modal';
-import { makeStyles } from '@material-ui/core/styles';
+// import Modal from '@material-ui/core/Modal';
+// import { makeStyles } from '@material-ui/core/styles';
 
 import './App.css';
 import Post from './Post'
@@ -8,12 +8,11 @@ import {db} from './firebase'
 
 function App() {
   // MATERIAL UI STYLING
-  const classes = useStyles();
-  const [modalStyle] = useState(getModalStyle);
+
 
   // Setting the State. State is a virtual memory
   const [posts, setPosts] = useState([]);
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   // useEffect - Runs a piece of code based on a specific condition
   // runs everytime when app file is loaded(the code runs when the page refreshes) and also runs if a condition changes 
@@ -29,16 +28,6 @@ function App() {
   }, []);
   return (
     <div className="app">
-
-      {/* MODAL */}
-        <Modal
-          open={open}
-          onClose={() => setOpen(false)}
-        >
-          <div style={modalStyle} className={classes.paper}>
-            <h2>Text in a modal</h2>
-          </div>
-        </Modal>
 
       {/* NAVBAR -> INSTAGRAM LOGO */}
       <div className="app__header">
